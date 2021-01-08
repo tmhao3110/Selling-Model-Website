@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới Thiệu - Đồ Chơi Phụ Kiện</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/trangchuCSS.css">
+    <link rel="stylesheet" href="css/gioithieuCSS.css">
+
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+</head>
+
+<body ng-app="myApp">
+    <header id="navbar" ng-include="'module-hoa/header.html'">
+
+    </header>
+    <div class="container">
+        <ul class="breadcrumb">
+            <li><a href="trangchu.html">TRANG CHỦ</a></li>
+            <li>GIỚI THIỆU</li>
+        </ul>
+    </div>
+    <h1 class="title">GIỚI THIỆU</h1>
+    <article>
+        <div class="container">
+            <div class="content">
+                <p>Cửa hàng đồ chơi Hafo</p>
+                <p>Chuyên về phụ kiện, vật phẩm, đồ trang trí</p>
+                <p>Phụ kiện anime: Naruto, Onepiece, Dragon Ball...</p>
+                <p>Chất lượng đảm bảo, uy tín, độc nhất</p>
+                <p>Địa chỉ:</p>
+                <p>19/4 Nguyễn Thị Thập quận 7 Hồ Chí Minh</p>
+                <p>Hotline:</p>
+                <p>- 123-456-7890</p>
+                <p>- 098-765-4321</p>
+                <p>Địa chỉ page:</p>
+                <p>http://facebook.com/hafostorevn</p>
+                <p>Địa chỉ website:</p>
+                <p>http://hafostore.vn/</p>
+            </div>
+        </div>
+    </article>
+    <footer style="margin-bottom:0; background-color: #252525; color: blanchedalmond; padding-top: 70px; padding-bottom: 20px;" class="fter" ng-include="'module-hoa/footer1.html'">
+
+    </footer>
+    <footer style="margin-bottom:0; background-color: #2F2F2F; color: #555555; padding: 5px;" ng-include="'module-hoa/footer2.html'">
+
+    </footer>
+</body>
+
+</html>
+
+<script>
+    var app = angular.module("myApp", []);
+</script>

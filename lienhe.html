@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên hệ - Đồ Chơi Phụ Kiện</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/trangchuCSS.css">
+    <link rel="stylesheet" href="css/lienheCSS.css">
+
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+    <header id="navbar" ng-include="'module-hoa/header.html'">
+
+    </header>
+    <div class="container">
+        <ul class="breadcrumb">
+            <li><a href="trangchu.html">TRANG CHỦ</a></li>
+            <li>LIÊN HỆ</li>
+        </ul>
+    </div>
+    <div>
+        <h1 class="title">LIÊN HỆ</h1>
+    </div>
+    <article>
+        <div class="container">
+            <div class="row content">
+                <div class="col-sm-6 col-md-6 col-xs-6 info-left">
+                    <h5 class="child-title">THÔNG TIN SHOP</h5>
+                    <div class="info-1">
+                        <div class="row">
+                            <div class="col-sm-2 col-md-2 col-xs-2">
+                                <p>ADDRESS</p>
+                            </div>
+                            <div class="col-sm-10 col-md-10 col-xs-10 child-content">
+                                19/4 Nguyễn Thị Thập quận 7 Hồ Chí Minh
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2 col-md-2 col-xs-2">
+                                <p>PHONE</p>
+                            </div>
+                            <div class="col-sm-10 col-md-10 col-xs-10 child-content">
+                                0937026557
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2 col-md-2 col-xs-2">
+                                <p>EMAIL</p>
+                            </div>
+                            <div class="col-sm-10 col-md-10 col-xs-10 child-content">
+                                hafostorevn@gmail.com
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="child-title-2">GIỜ PHỤC VỤ KHÁCH HÀNG</h5>
+                    <div class="info-2">
+                        <div class="row">
+                            <div class="col-sm-2 col-md-2 col-xs-2">
+                                <p>M - S</p>
+                            </div>
+                            <div class="col-sm-4 col-md-4 col-xs-4 child-content">
+                                08:00 to 22:00
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-2 col-md-2 col-xs-2">
+                                <p>SUN</p>
+                            </div>
+                            <div class="col-sm-4 col-md-4 col-xs-4 child-content">
+                                08:00 to 20:00
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-6 col-xs-6 info-right">
+                    <H5>GỬI THƯ CHO TÔI</H5>
+                    <p class="right-content">Nếu bạn có thắc mắc gì về sản phẩm, về dịch vụ, về cách cư xử của nhân vân. Xin hãy gửi thư cho tôi theo form phía dưới ! Cảm ơn, Rất hân hạnh được phục vụ.</p>
+                    <div class="form-action">
+                        <form name="formLienhe">
+                            <div class="form-group">
+                                <label>Tên:</label>
+                                <input ng-model="hovaten" class="form-control" type="text" placeholder="Tên:" required maxlength="30" name="txtHovaten">
+                                <span ng-show="formLienhe.txtHovaten.$invalid" style="color: red; font-style: italic; font-size: 12px; font-weight: normal;">Không để trống tên!</span>
+                            </div>
+                            <div class="form-group">
+                                <label>Email:</label>
+                                <input ng-model="email" type="email" class="form-control" placeholder="Email:" id="email" name="txtEmail" required>
+                                <span ng-show="formLienhe.txtEmail.$invalid" style="color: red; font-style: italic; font-size: 12px; font-weight: normal;">Không để trống email!</span>
+                            </div>
+                            <div class="form-group">
+                                <label>Điện thoại:</label>
+                                <input ng-model="sodienthoai" type="text" class="form-control" placeholder="Điện thoại:" pattern="(03|04|05|07|08|09)[0-9]{8}" name="txtSoDienThoai">
+                                <span ng-show="formLienhe.txtSoDienThoai.$invalid" style="color: red; font-style: italic; font-size: 12px; font-weight: normal;">Số điện thoại không đúng! Đầu số là 03,04,05,07,08,09!</span>
+                            </div>
+                            <div class="form-group">
+                                <label>Tin nhắn:</label>
+                                <textarea class="form-control" name="" id="" rows="10" placeholder="Tin nhắn:"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-dark" style="width: 80px;">Gửi</button>
+                        </form>
+                    </div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.9380513705205!2d106.71493631473335!3d10.739257992346706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f83f8a34c03%3A0xb5aaa6a8893b566a!2zMTkvNCBOZ3V54buFbiBUaOG7iyBUaOG6rXAsIELDrG5oIFRodeG6rW4sIFF14bqtbiA3LCBUaMOgbmggcGjhu5EgSOG7kyBDaMOtIE1pbmgsIFZpZXRuYW0!5e0!3m2!1sen!2s!4v1605952978820!5m2!1sen!2s"
+                        width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </article>
+    <footer style="margin-bottom:0; background-color: #252525; color: blanchedalmond; padding-top: 70px; padding-bottom: 20px;" class="fter" ng-include="'module-hoa/footer1.html'">
+
+    </footer>
+    <footer style="margin-bottom:0; background-color: #2F2F2F; color: #555555; padding: 5px;" ng-include="'module-hoa/footer2.html'">
+
+    </footer>
+</body>
+
+</html>
+
+<script>
+    var app = angular.module("myApp", []);
+    app.controller("myCtrl", function($scope) {
+
+    });
+</script>

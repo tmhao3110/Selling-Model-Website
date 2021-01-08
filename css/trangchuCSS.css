@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+body {
+    background: #f2f2f2;
+}
+
+
+/* #navbar {
+    background: #f2f2f2;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    display: block;
+    transition: top 0.3s;
+    z-index: 1;
+} */
+
+
+/* .modal {
+    z-index: 2;
+} */
+
+.menutora {
+    padding: 30px;
+    transition: 0.3s;
+}
+
+#logo {
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background: center;
+}
+
+@media screen and (min-width: 1440px) {
+    #logo {
+        padding-left: 200px;
+    }
+}
+
+.navbar {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+}
+
+.navbar .nav-item:not(:last-child) {
+    margin-right: 20px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 200px;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #555555;
+    padding: 10px 14px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* .carousel {
+    padding-top: 80px;
+} */
+
+.policy {
+    position: absolute;
+    padding-top: 2px;
+    padding-left: 100px;
+    float: none;
+}
+
+.policy-text {
+    padding-left: 150px;
+    text-align: left;
+    float: none;
+    font-size: 12px;
+    font-family: 'Quicksand', sans-serif;
+    /* font-size: 14px; */
+}
+
+.policy-text-1 {
+    color: #2F2F2F;
+}
+
+.policy-text-2 {
+    color: #ACACAC;
+}
+
+.card {
+    width: 300px;
+    border: none;
+    padding-top: 50px;
+    background-color: #f2f2f2;
+    font-size: 16px;
+}
+
+.card-header {
+    background-color: #f2f2f2;
+    border: none;
+}
+
+.card-body {
+    border: none;
+    background-color: #f2f2f2;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.card-footer {
+    background-color: #f2f2f2;
+    border: none;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.card img {
+    width: 260px;
+}
+
+.btn-prod {
+    height: 45px;
+}
+
+.card-header>img {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.card-hover {
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+    z-index: 1;
+    width: 75%;
+    cursor: pointer;
+    height: 0;
+    left: 38px;
+    transition: .5s ease;
+}
+
+.btn-prod:hover {
+    color: #EFB705;
+}
+
+.card:hover .card-hover {
+    height: 45%;
+}
+
+.card:hover .card-header>img {
+    opacity: 0.3;
+}
+
+.btnHome {
+    border-radius: 0;
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.jumbotron {
+    background-color: #f2f2f2;
+}
+
+footer {
+    font-family: 'Quicksand', sans-serif;
+}

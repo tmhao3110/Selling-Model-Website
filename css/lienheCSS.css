@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+    background-color: #F2F2F2;
+}
+
+ul.breadcrumb li {
+    display: inline;
+    font-family: monospace;
+    font-size: 13.5px;
+    padding-top: 12px;
+}
+
+ul.breadcrumb li+li::before {
+    padding: 8px;
+    color: #ACACAC;
+    content: "/\00a0";
+}
+
+ul.breadcrumb li a {
+    color: #ACACAC;
+    text-decoration: none;
+}
+
+.title {
+    font-family: 'Quicksand', sans-serif;
+    letter-spacing: 10px;
+    background-image: url(/images/jumbotron4.jpg);
+    background-size: 1520px 500px;
+    height: 150px;
+    color: white;
+    padding-top: 50px;
+    text-align: center;
+}
+
+.content {
+    padding-top: 50px;
+}
+
+.info-left,
+.info-right {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.info-1 {
+    padding-top: 25px;
+}
+
+.child-title-2 {
+    padding-top: 20px;
+}
+
+.info-2 {
+    padding-top: 25px;
+}
+
+.child-content {
+    color: #ACACAC;
+    font-size: 12.5px;
+    padding-top: 3.5px;
+}
+
+.right-content {
+    padding-top: 20px;
+    font-size: 13px;
+    color: #ACACAC;
+}
+
+.form-control {
+    font-size: 14px;
+    color: #ACACAC;
+}
+
+.form-action {
+    padding-top: 20px;
+}
+
+.fter {
+    margin-top: 100px;
+}

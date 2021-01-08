@@ -1,0 +1,70 @@
+<div ng-controller="mySanpham">
+    <div class="row">
+        <div class="col-xs-4 col-sm-4 col-md-4 prod" ng-repeat="p in showSanpham | orderBy:'gia' | limitTo: 9 : begin">
+            <div class="card">
+                <div class="card-header">
+                    <img src="/images/{{p.hinh}}" alt="">
+                    <div class="card-hover">
+                        <div class="row">
+                            <button class="col-sm-6 btn-prod btn btn-default" data-toggle="modal" data-target="#showpopup" ng-click="show(p.id); addToCart(p.id)"><i class='fas' style="float: right;">&#xf07a;</i></button>
+                            <button class="col-sm-6 btn-prod btn btn-default" data-toggle="modal" data-target="#showsanpham" ng-click="show(p.id)"><i class="fa" style="float: left;">&#xf06e;</i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    {{p.ten | uppercase}}
+                </div>
+                <div class="card-footer">
+                    <h4>{{p.gia | currency : "&#8363;" : 0}}</h4>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="showsanpham">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header bg-warning text-white">
+                        <h4 class="modal-title">Chi tiết sản phẩm</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-sm-6"><img src="/images/{{p.hinh}}" alt="" width="350px"></div>
+                            <div class="col-sm-6" style="float: left;; font-size: 20px; font-weight: bold; padding-top: 0px;">
+                                <p>{{p.ten | uppercase}}</p>
+                                <p>{{p.gia | currency : "&#8363;" : 0}} </p>
+                                <button type="button" class="btn btn-outline-warning">Thêm giỏ hàng</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="showpopup">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header bg-warning text-white">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-sm-4"><img src="/images/{{p.hinh}}" alt="" width="150px"></div>
+                            <div class="col-sm-8" style="float: left;  padding-top: 0px;">
+                                <p style="font-weight: bold;">{{p.ten | uppercase}}</p>
+                                <p><i class="fa">&#xf00c;</i> Thêm vào giỏ hàng thành công</p>
+                                <button type="button" class="btn btn-outline-warning" data-dismiss="modal">Tiếp tục mua hàng</button>
+                                <a type="button" class="btn btn-outline-warning" href="giohang.html">Đi tới giỏ hàng</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <ul class="pagination justify-content-center  pagination-lg" style="margin: 40px 0;">
+        <li class="page-item"><a class="page-link border border-0" href="" ng-click="first()">&laquo;</a></li>
+        <li class="page-item"><a class="page-link border border-0" href="" ng-click="prev()">&#8249;</a></li>
+        <li class="page-item"><a class="page-link border border-0" href="" ng-click="next()">&#8250;</a></li>
+        <li class="page-item"><a class="page-link border border-0" href="" ng-click="last()">&raquo;</a></li>
+    </ul>
+</div>

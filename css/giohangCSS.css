@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+article {
+    font-family: 'Quicksand', sans-serif;
+}
+
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+    background-color: #F2F2F2;
+}
+
+ul.breadcrumb li {
+    display: inline;
+    font-family: monospace;
+    font-size: 13.5px;
+    padding-top: 12px;
+}
+
+ul.breadcrumb li+li::before {
+    padding: 8px;
+    color: #ACACAC;
+    content: "/\00a0";
+}
+
+ul.breadcrumb li a {
+    color: #ACACAC;
+    text-decoration: none;
+}
+
+.title {
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    letter-spacing: 10px;
+    background-image: url(/images/jumbotron2.jpg);
+    background-size: 1520px 500px;
+    height: 150px;
+    color: white;
+    padding-top: 50px;
+    text-align: center;
+}
+
+.ttms:hover {
+    color: yellow;
+}

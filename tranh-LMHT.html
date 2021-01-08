@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản phẩm - Đồ chơi phụ kiện</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/trangchuCSS.css">
+    <link rel="stylesheet" href="css/sanphamCSS.css">
+
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+</head>
+
+<body ng-app="myApp">
+    <header id="navbar">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="col-5">
+                <a class="navbar-brand" id="logo" style="padding-left: 200px;" href="trangchu.html"><img src="/images/logo.png" alt="" height="50px"></a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="trangchu.html">TRANG CHỦ</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="sanpham.html" role="button" aria-haspopup="true" aria-expanded="false">
+                    SẢN PHẨM
+                  </a>
+                        <div class="dropdown-content">
+                            <a href="mohinh.html">MÔ HÌNH</a>
+                            <a href="tranhsondau.html">TRANH SƠN DẦU</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="tainghe.html">TAI NGHE</a>
+                            <a href="ao.html">ÁO</a>
+
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gioithieu.html">GIỚI THIỆU</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="lienhe.html">LIÊN HỆ</a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <form class="form-inline">
+                    <input class="form-control mr-sm-1" type="search" placeholder="Search" aria-label="Search" style="width: 150px; height: 30px;">
+                    <button class="btn my-2 my-sm-0" type="submit"><i class='fas'>&#xf002;</i></button>
+                </form>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class='fas'>&#xf406;</i>
+                        </a>
+
+                        <div class="dropdown-content dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a href="#" data-toggle="modal" data-target="#dangnhap">ĐĂNG NHẬP</a>
+                            <a href="#" data-toggle="modal" data-target="#dangki">ĐĂNG KÝ</a>
+                        </div>
+
+                        <div class="modal" id="dangnhap">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+
+                                    <div class="modal-header bg-info text-white">
+                                        <h4 class="modal-title">ĐĂNG NHẬP</h4>
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <form action="">
+                                            <div class="form-group">
+                                                <label>Tài khoản:</label>
+                                                <input type="text" class="form-control" placeholder="Nhập tài khoản">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Mật khẩu:</label>
+                                                <input type="password" class="form-control" placeholder="Nhập mật khẩu">
+                                            </div>
+                                            <div class="form-group">
+                                                <a class="text-secondary" data-toggle="modal" data-target="#quenmatkhau" data-dismiss="modal"><label>Quên mật khẩu?</label></a><span class="text-secondary"> - </span><a class="text-secondary" data-toggle="modal"
+                                                    data-target="#dangki" data-dismiss="modal"><label>Đăng kí?</label></a>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button type="submit" class="btn btn-primary">Đăng nhập</button>
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Hủy</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal" id="quenmatkhau">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+
+                                    <div class="modal-header bg-info text-white">
+                                        <h4 class="modal-title">ĐẶT LẠI MẬT KHẨU</h4>
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <form action="">
+                                            <div class="form-group">
+                                                <label>Email:</label>
+                                                <input type="text" class="form-control" placeholder="Nhập tài khoản">
+                                            </div>
+                                            <div class="form-group">
+                                                <p class="text-secondary">Chúng tôi sẽ gửi cho bạn một email để đặt lại mật khẩu của bạn.</p>
+                                                <a class="text-secondary" data-toggle="modal" data-target="#dangnhap" data-dismiss="modal"><label>Đăng nhập?</label></a><span class="text-secondary"> - </span><a class="text-secondary" data-toggle="modal"
+                                                    data-target="#dangki" data-dismiss="modal"><label>Đăng kí?</label></a>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button type="submit" class="btn btn-primary">Xác nhận</button>
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Hủy</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal" id="dangki">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+
+                                    <div class="modal-header bg-info text-white">
+                                        <h4 class="modal-title">ĐĂNG KÝ</h4>
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <form action="">
+                                            <div class="row">
+                                                <div class="form-group col-sm-6">
+                                                    <label>Họ:</label>
+                                                    <input type="text" class="form-control" placeholder="Nhập họ của bạn">
+                                                </div>
+                                                <div class="form-group col-sm-6">
+                                                    <label>Tên:</label>
+                                                    <input type="text" class="form-control" placeholder="Nhập tên của bạn">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Email:</label>
+                                                <input type="email" class="form-control" placeholder="Nhập email">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Mật khẩu:</label>
+                                                <input type="password" class="form-control" placeholder="Nhập mật khẩu">
+                                            </div>
+                                            <div class="form-group">
+                                                <a class="text-secondary" data-toggle="modal" data-target="#dangnhap" data-dismiss="modal"><label>Bạn đã có tài khoản. Đăng nhập?</label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+
+                                        <button type="submit" class="btn btn-primary">Đăng ký</button>
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Hủy</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class='fas'>&#xf218;</i>
+                        </a>
+
+                                                <div class="dropdown-content dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                                    <a class="dropdown-item" href="giohang.html">XEM GIỎ HÀNG</a>
+                                                </div>
+                    </li>
+                </ul>
+                </div>
+        </nav>
+    </header>
+    <div class="container">
+        <ul class="breadcrumb">
+            <li><a href="trangchu.html">TRANG CHỦ</a></li>
+            <li>TRANH CANVAS LIÊN MINH HUYỀN THOẠI</li>
+        </ul>
+    </div>
+    <div>
+        <h1 class="title">TRANH CANVAS LIÊN MINH HUYỀN THOẠI</h1>
+    </div>
+    <div class="container products">
+        <div class="row">
+            <aside class="col-md-3 col-sm-3 col-xs-3">
+                <h3 class="aside-title">MÔ HÌNH</h3>
+                <ul class="aside-menu">
+                    <li><a href="mohinh-onepiece.html">Mô hình Onepiece</a></li>
+                    <li><a href="mohinh-naruto.html">Mô hình Naruto</a></li>
+                    <li><a href="mohinh-dragonball.html">Mô hình DragonBall</a></li>
+                    <li><a href="mohinh-LMHT.html">Mô hình Liên minh huyền thoại</a></li>
+                </ul>
+
+                <h3 class="aside-title">TRANH CANVAS</h3>
+                <ul class="aside-menu">
+                    <li><a href="tranh-onepiece.html">Tranh Canvas Onepiece</a></li>
+                    <li><a href="tranh-naruto.html">Tranh Canvas Naruto</a></li>
+                    <li><a href="tranh-dragonball.html">Tranh Canvas DragonBall</a></li>
+                    <li><a href="tranh-LMHT.html">Tranh Canvas Liên minh huyền thoại</a></li>
+                </ul>
+
+                <h3 class="aside-title">TAI NGHE</h3>
+                <ul class="aside-menu">
+                    <li><a href="tainghe-airpod.html">Tai nghe Airpods</a></li>
+                    <li><a href="tainghe-airpodpro.html">Tai nghe Airpods Pro</a></li>
+                </ul>
+
+                <h3 class="aside-title">ÁO</h3>
+                <ul class="aside-menu">
+                    <li><a href="aohoodie.html">Áo Hoodie</a></li>
+                </ul>
+            </aside>
+            <article class="col-md-9 col-sm-9 col-xs-9">
+                <div ng-controller="mySanpham">
+                    <div class="row">
+                        <div class="col-xs-4 col-sm-4 col-md-4 prod" ng-repeat="p in showSanpham | limitTo: 9 : begin">
+                            <div class="card">
+                                <div class="card-header">
+                                    <img src="/images/{{p.hinh}}" alt="">
+                                    <div class="card-hover">
+                                        <div class="row">
+                                            <button class="col-sm-6 btn-prod btn btn-default" ng-click="addToCart(p.id)"><i class='fas' style="float: right;">&#xf07a;</i></button>
+                                            <button class="col-sm-6 btn-prod btn btn-default" data-toggle="modal" data-target="#showtranhlmht" ng-click="show(p.id)"><i class="fa" style="float: left;">&#xf06e;</i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    {{p.ten | uppercase}}
+                                </div>
+                                <div class="card-footer">
+                                    <h4>{{p.gia | currency : "&#8363;" : 0}}</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal fade" id="showtranhlmht">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header bg-warning text-white">
+                                        <h4 class="modal-title">Chi tiết sản phẩm</h4>
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-sm-6"><img src="/images/{{p.hinh}}" alt="" width="350px"></div>
+                                            <div class="col-sm-6" style="float: left;; font-size: 20px; font-weight: bold; padding-top: 0px;">
+                                                <p>{{p.ten | uppercase}}</p>
+                                                <p>{{p.gia | currency : "&#8363;" : 0}} </p>
+                                                <button type="button" class="btn btn-outline-warning">Thêm giỏ hàng</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <ul class="pagination justify-content-center  pagination-lg" style="margin: 40px 0;">
+                        <li class="page-item"><a class="page-link border border-0" href="" ng-click="first()">&laquo;</a></li>
+                        <li class="page-item"><a class="page-link border border-0" href="" ng-click="prev()">&#8249;</a></li>
+                        <li class="page-item"><a class="page-link border border-0" href="" ng-click="next()">&#8250;</a></li>
+                        <li class="page-item"><a class="page-link border border-0" href="" ng-click="last()">&raquo;</a></li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+    </div>
+    <footer style="margin-bottom:0; background-color: #252525; color: blanchedalmond; padding-top: 70px; padding-bottom: 20px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    GIỚI THIỆU SHOP<br><br>
+                    <p class="text-secondary">Cửa hàng bán các sản phẩm trưng bày, trang trí, quà tặng, phụ kiện anime: Onepiece, Naruto, dragonball... Chất lượng đảm bảo - uy tín - giao hàng nhanh - tư vấn nhiệt tình cho khách hàng </p>
+                </div>
+                <div class="col-sm-4">
+                    LIÊN HỆ VỚI SHOP<br><br>
+                    <p class="text-secondary">Hotline1: 123-456-7890</p>
+                    <p class="text-secondary">Hotline2: 098-765-4321</p>
+                    <p class="text-secondary">Mở cửa - đóng cửa: 08:00-22:00</p>
+                    <p class="text-secondary">Mail: hafostorevn@gmail.com</p>
+                </div>
+                <div class="col-sm-4">
+                    THANH TOÁN<br><br>
+                    <p class="text-secondary">Có thể thanh toán trước bằng tài khoản ngân hàng hoặc thanh toán COD khi nhận hàng</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <footer style="margin-bottom:0; background-color: #2F2F2F; color: #555555; padding: 5px;">
+        <div class="container">
+            <span>Copyright by Hafo Store &copy; 2020</span>
+            <span style="float: right;">-Powered by Korean</span>
+        </div>
+    </footer>
+</body>
+
+</html>
+
+<script src="/js/tranh-LMHT.js">
+</script>
